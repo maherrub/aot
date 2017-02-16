@@ -1,0 +1,79 @@
+{% load static %}
+{% load staticfiles %}
+<!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav" >
+            <!--profile picture link-->
+            <br>
+            <h5 class="h5-responsive text-center font-roboto-xs text-muted">BETHESDA CATHEDRAL</h5>
+            <hr>
+            <!--
+            <div class="chip box-shadow"> 
+                    <img src="{% static 'images/bc-icon.png' %}" alt="bc-icon" class="img-responsive">
+                    username
+            </div>
+            -->
+            
+            <!--English Menu-->
+            <!--Accordion test-->
+            <div class="btn-group overflow-x: hidden; overflow-y: hidden;">
+                <button class="accordion">English</button>
+                <div class="panel">
+                    <a href="\"><h5 class="text-muted submenu sm1">Home</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title two</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title three</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm2">title three one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm2">title three two</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm3">title three three one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm4">title three three one one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title four</h5></a>
+                </div>
+
+                <button class="accordion">Mandarin</button>
+                <div class="panel">
+                    <a href="#"><h5 class="text-muted submenu sm1">title one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title two</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title three</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm2">title three one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm2">title three two</h5></a>
+                </div>
+
+                <button class="accordion">Others</button>
+                <div class="panel">
+                    <a href="#"><h5 class="text-muted submenu sm1">title one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title two</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title three</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm2">title three one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm2">title three two</h5></a>
+                </div>
+            </div>
+            <!--/Accordion-->
+            <!--Mandarin Menu-->
+        </ul>
+    </div>
+        
+        
+    
+    <!-- /#sidebar-wrapper -->
+    
+    <!-- Page Content & Static Menu -->
+    <div id="page-content-wrapper">
+    <div class="container-fluid">
+        <nav class="navbar navbar-primary navbar-fixed-top">
+            <div class=""> <!--container enter-animation-->
+                <a class="bluetips pull-right" href="#menu-toggle" data-toggle="tooltip" data-placement="left" title=""><i class="btn btn-primary fa fa-bars pull-right" id="menu-toggle" aria-hidden="true"></i></a>  
+                <a class="bluetips pull-right" href="/accounts/login/" data-toggle="tooltip" data-placement="left" title="register or login"><i class="btn btn-primary fa fa-user pull-right" aria-hidden="true"></i></a>
+            </div>       
+        </nav>
+
+
+
+
+{% comment %}
+
+1.  Do not close two divs for Page Content and Static Menu  Section.
+    The other two div is on the base.html
+2. Place this entire content below : div id="wrapper"
+3. This page is called within base html.
+
+{% endcomment %}

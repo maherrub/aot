@@ -1,0 +1,215 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Bethesda Cathedral{% endblock %}</title>
+ 
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Sidebar CSS -->
+    <link href="{% static 'css/sidebar.css' %}" rel="stylesheet">
+
+    <!-- Sidebar Bullets -->
+    <link href="{% static 'css/sidebullets.css' %}" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    
+    <link href="{% static 'css/mdb.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <!--Other cores-->
+    <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!--
+    <link rel="shortcut icon" href="static\favicon.ico" type="image/x-icon">
+    
+       
+    <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
+    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+    <!--Custom Style Sheet-->
+    <!--
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    -->
+    <!-- Custom Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Fredericka+the+Great|Great+Vibes|Pompiere|Roboto:100" rel="stylesheet">
+    <!--
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fonts/font-awesome/css/font-awesome.css' %}" rel="stylesheet" type="text/css">
+    -->
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!--Custom Parallax CSS -->
+    <link href="{% static 'css/parallax.css' %}" rel="stylesheet">
+
+    <!--Custom Animations-->
+     <link href="{% static 'css/animationr.css' %}" rel="stylesheet">
+
+    <!--Application offsets -->
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="overflow-x: hidden; overflow-y: scroll;" id="page-top">
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav" >
+            <!--profile picture link-->
+            <br>
+            <br>
+            <h5 class="h5-responsive text-center text-muted">BETHESDA CATHEDRAL</h5>
+            
+            <div class="chip box-shadow"> <!--hinge-animation-->
+                    <img src="{% static 'images/bc-icon.png' %}" alt="bc-icon" class="img-responsive">
+                    username
+            </div>
+            <div class="divider"></div>
+            <!--English Menu-->
+            <!--Accordion test-->
+            <div class="btn-group overflow-x: hidden; overflow-y: hidden;">
+                <button class="accordion">English</button>
+                <div class="panel">
+                    <a href="\"><h5 class="text-muted submenu sm1">Home</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title two</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title three</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm2">title three one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm2">title three two</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm3">title three three one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm4">title three three one one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title four</h5></a>
+                </div>
+
+                <button class="accordion">Mandarin</button>
+                <div class="panel">
+                    <a href="#"><h5 class="text-muted submenu sm1">title one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title two</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title three</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm2">title three one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm2">title three two</h5></a>
+                </div>
+
+                <button class="accordion">Others</button>
+                <div class="panel">
+                    <a href="#"><h5 class="text-muted submenu sm1">title one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title two</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm1">title three</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm2">title three one</h5></a>
+                    <a href="#"><h5 class="text-muted submenu sm2">title three two</h5></a>
+                </div>
+            </div>
+            <!--/Accordion-->
+            <!--Mandarin Menu-->
+        </ul>
+    </div>
+        
+        
+    
+    <!-- /#sidebar-wrapper -->
+    
+    <!-- Page Content & Static Menu -->
+    <div id="page-content-wrapper">
+    <div class="container-fluid">
+        <nav class="navbar navbar-primary navbar-fixed-top">
+            <div class=""> <!--container enter-animation-->
+                <a href="#menu-toggle"><i class="btn fa fa-bars pull-right" id="menu-toggle" aria-hidden="true"></i></a>             
+                <a href="/accounts/login/"><i class="btn fa fa-user pull-right" aria-hidden="true"></i></a>
+            </div>       
+        </nav>
+        
+    
+    
+       
+       {% block content %}
+       {% endblock %}
+       
+       <!--Footer -->
+       <!-- /#page-content-wrapper -->
+       
+       <div class="container-fluid">
+            <div class="panel-footer-inverse">
+            <p class="text-center text-muted"> Copyright © Bethesda Cathedral 2017. All right reserved. </p>
+            </div>
+            <a href="#page-top" class="page-scroll text-muted btn btn-md sr-button btn-position-top pull-right"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+       </div>
+       </div> 
+    </div>
+</div>
+<!--all js scripts below-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/popover.js' %}"></script>
+
+<!-- Menu toggle script -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/accordion.js' %}"></script>
+
+
+<script>
+        $("#menu-toggle").click( function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+</script>
+
+<!--Go back button script-->
+<script>
+    function goBack() {
+    window.history.back();
+    }
+</script>
+
+<!--/ menu bar button script-->
+<script>
+    function myFunction(x) {
+    x.classList.toggle("change");
+    }
+</script>
+
+
+
+<!-- not required enable only if support required -->
+    <!-- jQuery 3.11 -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+
+    <!-- Theme JavaScript for scroll effect -->
+    <script src="{% static 'js/creative.min.js' %}"></script>
+</body>
+</html>

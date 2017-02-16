@@ -1,0 +1,37 @@
+{% extends 'templates/base.html' %}
+{% block usermanager_active %}active{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <!-- Uprofile -->
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>{{ user.username }}'s Profiles</h3>
+        </div>
+        {% if uprofiles %}
+            {% for uprofile in uprofiles %}
+                <div class="col-sm-4 col-lg-2">
+                    <div class="thumbnail">
+                        <a href="{% url 'usermanager:detail' uprofile.id %}">
+                            <img src="{{ uprofile.upicture.url }}" class="img-responsive">
+                        </a>
+                        <div class="caption">
+                            <h2>{{ uprofile.umobile }}</h2>
+                        </div>
+                    </div>
+                </div>
+                {% cycle '' '' '' '' '' '<div class="clearfix visible-lg"></div>' %}    
+            {% endfor %}   
+        {% else %}
+            <div class="col-sm-12">
+                <br>
+                <a href="{% url 'usermanager:create_uprofile' %}">
+                    <button type="button" class="btn btn-success">
+                        <span class="glyphicon glyphicon-plus"></span>&nbsp; Add a Profile
+                    </button>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+
+</div>
+{% endblock %}
