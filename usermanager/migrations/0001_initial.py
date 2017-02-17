@@ -16,12 +16,26 @@ class Migration(migrations.Migration):
             name='UserProfile',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('salutation', models.CharField(blank=True, max_length=2, choices=[(1, b'Master'), (2, b'Mr'), (3, b'Ms'), (4, b'Mdm'), (5, b'Dr'), (6, b'Past'), (7, b'Evan'), (8, b'Prof')])),
-                ('usercover', models.FileField(upload_to=b'profile_pictures/', blank=True)),
+                ('usercover', models.FileField(upload_to='profile_pictures/', blank=True)),
                 ('usermobile', models.DecimalField(max_digits=8, decimal_places=0, blank=True)),
-                ('created_on', models.DateTimeField(auto_now_add=True)),
-                ('edited_on', models.DateTimeField(auto_now=True)),
-                ('user', models.ForeignKey(default=1, to=settings.AUTH_USER_MODEL)),
+                ('dob', models.DateField(default='1920-01-01')),
             ],
+        ),
+        migrations.CreateModel(
+            name='UserSalute',
+            fields=[
+                ('id', models.AutoField(serialize=False, primary_key=True)),
+                ('name', models.CharField(max_length=6, blank=True)),
+            ],
+        ),
+        migrations.AddField(
+            model_name='userprofile',
+            name='salutation',
+            field=models.OneToOneField(blank=True, to='usermanager.UserSalute'),
+        ),
+        migrations.AddField(
+            model_name='userprofile',
+            name='user',
+            field=models.ForeignKey(default=1, to=settings.AUTH_USER_MODEL),
         ),
     ]

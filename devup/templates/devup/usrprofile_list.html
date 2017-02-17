@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<!--Jumbotran-->
+<div class="container-fluid">
+  <div class="jumbotron text-center" style="background-color: rgba(0, 0, 0, 0.05); margin-top: -20px; margin-left: -50px; margin-right: -50px; overflow: hidden;">
+    <h4 class="font-pompiere-md pull-left">{% block title %}My Profile{% endblock %}</h4>  
+  </div>
+</div>
+{% for up in object_list %}
+  <!--card1 only one of the button required as per business logic users are allowed to create their profile only once-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <!--User profile update url format /up/2/update-->
+      <a href="/up/{{ up.id }}/update" class="btn btn-info btn-block pull-right"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Update</a>
+
+{% empty %}
+      <!--User profile create-->
+      <a href="/up/up_create" class="btn btn-info btn-block pull-right"><i class="fa fa-plus" aria-hidden="true"></i>Create</a>
+{% endfor %}
+      
+    </div>
+  </div>
+</div>
+    <!--/card1-->
+
+{% for up in object_list %}
+<div class="divider"></div>
+<div class="container-fluid">
+  <div class="row">
+    
+    <!--card2-->
+    <div class="col-sm-3 col-md-3 col-lg-3">
+      <div class="card">
+        <div class="card-image">
+          <div class="grey view overlay hm-zoom hm-white-slight z-depth-0">
+            {% if up.usercover %}
+              <img src="{{ up.usercover.url }}" class="img-responsive img-fluid waves-effect waves-light pull-left " style="overflow:hidden" data-toggle="tooltip" title="Cover Image">
+              <div class="mask"></div>
+            {% else %}
+              <h5>Please upload your square profile photo</h5>
+            {% endif %}  
+          </div>
+          </div>
+          <div class="card-content font-roboto-xs">
+            <span>{{ up.dob }}</span>
+          </div>
+        </div>
+        </div>
+      <!--/card2-->
+      <!--card3-->
+        <div class="col-md-6 col-lg-6">
+          <div class="card">
+          <div class="card-content font-roboto-xs">
+            <span>{{ up.salutation}}. {{ up.firstname }} {{up.lastname}}</span><br>
+            <span>Mobile : {{ up.usermobile }}</span>
+          </div>
+          </div>
+        </div>
+        <!--/card3-->
+        
+</div>
+<!--/row-->
+</div>
+<!--/container-->
+{% endfor %}
+
+{% endblock %}
+
+
+{% comment %}
+
+<!-- original link
+  <tr><td>{% if perms.todo.view_todo %}<a href="{{todo.get_absolute_url}}">{{todo}}</a>{% else %}{{todo}}{% endif %}</td>
+  <td>{% if perms.todo.change_todo %}<a href="{% url 'todo_update' todo.pk %}">Update</a>{% endif %} | {% if perms.todo.delete_todo %}<a href="{% url 'todo_delete' todo.pk %}">Delete</a>{% endif %}</td></tr>
+
+<tr>
+                            <td>{{ up.user.username }}</td>
+                           {% if perms.todo.view_todo %}
+                            <td><a href="up_detail/{{ up.id }}"> {{ todo.title }}</a></td>
+                            {% else %}
+                            <td>{{ todo.title }}</td>
+                            {% endif %}
+                            {% if perms.todo.change_todo %}
+                            <td><a class="btn btn-xs btn-warning" href="todo{{ todo.id }}/update">Change</a></td>
+                            {% endif %}
+                            {% if perms.todo.delete_todo %}
+                            <td><a class="btn btn-xs btn-danger" href="todo{{ todo.id }}/delete">Delete</a></td>
+                            {% endif %}
+
+                          </tr>
+
+
+
+-->
+
+{% endcomment%}

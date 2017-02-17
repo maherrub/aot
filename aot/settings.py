@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'multiselectfield',
     'crispy_forms',
     'registration',
+    'devup.apps.devupConfig',
 #    'usermanager.apps.usermanagerConfig',
 #    'website.apps.websiteConfig',
 )

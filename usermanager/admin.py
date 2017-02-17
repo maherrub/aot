@@ -1,6 +1,6 @@
 from django.contrib import admin
-from usermanager.models import UsrProfile, SaluteList
+from usermanager.models import UserProfile, UserSalute
 
 # Register your models here.
-admin.site.register(UsrProfile) 
-admin.site.register(SaluteList)
+admin.site.register(UserProfile) 
+admin.site.register(UserSalute)

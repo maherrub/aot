@@ -1,5 +1,6 @@
 {% load static %}
 {% load staticfiles %}
+
 <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav" >
@@ -8,8 +9,10 @@
             
             <h5 class="h5-responsive text-center font-roboto-xs text-muted">BETHESDA CATHEDRAL</h5>
             
-            <div class="chip box-shadow"> <!--hinge-animation-->
+            <div class="chip box-shadow">
+                         
                     <img src="{% static 'images/bc-icon.png' %}" alt="bc-icon" class="img-responsive">
+                   
                     {{ user.username }}
             </div>
             <hr>
@@ -26,7 +29,7 @@
                     <a href="#"><h5 class="text-muted submenu sm1">myActivities</h5></a>
                     <a href="#"><h5 class="text-muted submenu sm1">myLibrary</h5></a>
                     <a href="#"><h5 class="text-muted submenu sm1">mySubscriptions</h5></a>
-                    <a href="#"><h5 class="text-muted submenu sm1">myProfile</h5></a>
+                    <a href="/up/up_list"><h5 class="text-muted submenu sm1">myProfile</h5></a>
                 </div>
 
                 <button class="accordion overflow-x: hidden; overflow-y: hidden;">English</button>

@@ -14,6 +14,7 @@ urlpatterns = [
 
     #Sites
     url(r'^', include('website.urls')),
+    url(r'^up/', include('devup.urls')),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
